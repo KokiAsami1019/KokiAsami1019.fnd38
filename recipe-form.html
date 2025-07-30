@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レシピフォーム</title>
+    <link rel="stylesheet" href="css/recipe-form.css">
+    <script src="js/recipe-form.js"></script>
+    <script src="js/createRecipe.js"></script>
+</head>
+<body>
+    <form id="recipe-form">
+        <div class="form-group">
+            <label for="title" class="required">タイトル</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="serving" class="required">材料</label>
+            <input type="number" id="serving" name="serving" min="1" required> 人分用
+            <div id="ingredient-list">
+                <div class="ingredient">
+                    <input type="text" name="ingredient-name" placeholder="材料名">
+                    <select name="ingredient-unit">
+                        <option value="grams">グラム</option>
+                        <option value="teaspoon">小さじ</option>
+                        <option value="tablespoon">大さじ</option>
+                    </select>
+                    <input type="number" name="ingredient-amount" placeholder="量" min="0">
+                    <button type="button" class="add-button" onclick="addIngredient()">+</button>
+                    <button type="button" class="remove-button" onclick="removeIngredient()">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="time" class="required">所要時間</label>
+            <input type="number" id="time" name="time" min="0" step="15" required> 分
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="steps">調理手順</label>
+            <textarea id="steps" name="steps"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="comments">感想</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="photo">写真</label>
+            <input type="file" id="photo" name="photo">
+        </div>
+        <button type="submit" id="submit-recipe">登録</button>
+        <button type="button" id="cancel-button">キャンセル</button>
+    </form>
+</body>
+</html>
