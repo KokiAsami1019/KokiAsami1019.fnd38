@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/recipe_list.css">
+  <link rel="stylesheet" href="css/recipe.css">
+  <script type="text/javascript" src="js/createRecipe.js"></script>
+  <script type="text/javascript" src="js/deleteRecipe.js"></script>
+  <script type="text/javascript" src="js/createRecipehtml.js"></script>
+</head>
+<body class="list">
+    <div class="recipe-list-items" id="items">
+        <div class="item1">
+            <div class = header>
+                <div class="title"><span class="title1">MyRecipe</span><span>  |我が家の味</span></div>
+                <div class="button1">Logout</div>
+            </div>
+            <img src="img/recipe_list_background.jpg" alt="背景">
+        </div>
+        <div class="item2">
+            <div class="sort">登録順</div>
+            <a class="registration" href = "recipe-form.html">新規登録</a>
+        </div>
+        <div class="item3" id="item3">
+            <div class="recipeheader">
+                <div>レシピ一覧</div>
+                <div>OPTION</div>
+            </div>
+            <div id="recipe-area">
+                <template id="recipe-template">
+                    <div class="recipe">
+                        <a href=""></a>
+                        <img src="" alt="">
+                        <div class="recipe-text">
+                            <h2><span class="recipe-name"></span></h2>
+                            <p>所要時間：<span class="recipe-time"></span><br>
+                                感想：<span class="recipe-impression"></span>
+                            </p>
+                        </div>
+                        <div class="recipe-button">
+                            <button class="button2" id="button2">削除</button>
+                            <button class="button3">編集</button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+</body>
+</html>
